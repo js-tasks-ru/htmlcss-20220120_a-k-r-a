@@ -1,5 +1,6 @@
 /* Стилизация кнопки */
 
+
 .button {
   display: flex;
   justify-content: center;
@@ -54,3 +55,4 @@
   opacity: .5;
   cursor: not-allowed;
 }
+
