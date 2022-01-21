@@ -1,7 +1,4 @@
 /* Стилизация кнопки */
-@import './assets/css/normalize.css';
-@import './assets/css/main.css';
-
 .button {
   display: flex;
   justify-content: center;
