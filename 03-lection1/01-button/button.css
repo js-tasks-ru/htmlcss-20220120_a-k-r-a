@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 189px;
+  min-width: 189px; /* https://ishadeed.com/article/defensive-css */
   height: 48px;
   padding: 15px 15px 14px 15px;
 
