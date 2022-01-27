@@ -1,14 +1,13 @@
 /* Стилизация аккордеона */
 
-.accordion {
-  max-width: 730px;
+.accordion__item {
   margin-bottom: .5em;
   border: 1px solid var(--grey-3);
   border-radius: var(--border-radius);
   font-weight: 400;
 }
 
-.accordion:last-child {
+.accordion__item:last-child {
   margin-bottom: 0;
 }
 
@@ -34,7 +33,7 @@
   background: url(../../assets/images/chevron.svg) no-repeat;
 }
 
-.accordion[open] .accordion__control {
+.accordion__item[open] .accordion__control {
   transform: rotate(180deg);
   background-position: bottom;
 }
