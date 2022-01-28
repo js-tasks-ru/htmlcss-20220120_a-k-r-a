@@ -1,3 +1,9 @@
+.footer {
+  padding: 72px 0 96px;
+  text-align: center;
+  background-color: var(--white);
+}
+
 .footer__headline {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -11,6 +17,6 @@
   margin: 0 auto;
 }
 
-.footer__headline + p {
+.footer__text {
   margin-top: 0;
 }

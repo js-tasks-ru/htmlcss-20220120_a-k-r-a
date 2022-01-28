@@ -1,1 +1,4 @@
-/* header */
+.header {
+  padding: 96px 0 76px;
+  background-color: var(--white);
+}

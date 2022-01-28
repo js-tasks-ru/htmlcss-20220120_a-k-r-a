@@ -1,32 +1,10 @@
 @import '../container/container.css';
-@import '../footer/footer.css';
 @import '../header/header.css';
+@import '../main/main.css';
+@import '../footer/footer.css';
 
 .page {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-}
-
-.page__header {
-  padding: 96px 0 76px;
-}
-
-.page__main {
-  flex: 1;
-  padding: 68px 0;
-  background-color: var(--grey-1);
-  border-top: 1px solid var(--grey-2);
-  border-bottom: 1px solid var(--grey-2);
-}
-
-.page__footer {
-  padding: 72px 0 96px;
-  text-align: center;
-}
-
-.page__header ,
-.page__footer {
-  background-color: var(--white);
 }
