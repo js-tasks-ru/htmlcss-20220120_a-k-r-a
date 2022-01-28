@@ -1,0 +1,54 @@
+/* Стилизация аккордеона */
+
+.accordion__item {
+  margin-bottom: .5em;
+  border: 1px solid var(--grey-3);
+  border-radius: var(--border-radius);
+  font-weight: 400;
+}
+
+.accordion__item:last-child {
+  margin-bottom: 0;
+}
+
+.accordion__summary {
+  display: flex;
+  padding: 1.5em 2em;
+  cursor: pointer;
+}
+
+.accordion__title {
+  padding-right: .5em;
+}
+
+/* Arrow open/closed in the summary */
+.accordion__summary::-webkit-details-marker {  /* нестандартный псевдоэлемент Google Chrome */
+  display: none;
+}
+
+.accordion__control {
+  display: flex;
+  flex: 16px 0 0;
+  margin: 4px 0 0 auto;
+  background: url(../../assets/images/chevron.svg) no-repeat;
+}
+
+.accordion__item[open] .accordion__control {
+  transform: rotate(180deg);
+  background-position: bottom;
+}
+/* END Arrow open/closed in the summary */
+
+.accordion__content {
+  padding: 0 2em 2em;
+  color: var(--grey-4)
+}
+
+.accordion__content-item {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.accordion__content-item:last-child {
+  margin-bottom: 0;
+}
