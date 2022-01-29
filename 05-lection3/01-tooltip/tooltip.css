@@ -1,0 +1,63 @@
+.tooltip {
+  --val1: 4px;
+  --val2: 16px;
+  /* --val1 and --val2 play together */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip__message {
+  position: absolute;
+  bottom: calc(100% + var(--val1)); /* Moves the element to top of its position by: its height + freely chosen distance */
+  left: 50%;
+  transform: translate(-50%, 0); 
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 0;
+}
+
+.tooltip__message-body {
+  position: relative;
+  padding: .75rem 1.25rem;
+
+  border-radius: var(--border-radius);
+  background-color: var(--primary);
+  white-space: nowrap;
+  font-weight: 400;
+  color: var(--grey-2);
+}
+
+.tooltip__message-marker {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  margin-top: -8px;
+  z-index: -1; /* Marker should be under the message-text */
+  background-color: var(--primary);
+}
+
+.tooltip__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../../assets/images/icons/help.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: var(--val2); /* Increases the touch aria of the icon */
+}
+
+.tooltip__icon:hover {
+  cursor: pointer;
+}
+
+.tooltip__icon:hover + .tooltip__message {
+  opacity: 1;
+  transition: opacity .3s linear;
+}
