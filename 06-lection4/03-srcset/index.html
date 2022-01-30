@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srcset</title>
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./srcset.css">
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
     </head>
     <body>
-
+        <div class="image-block image-block_300">
+            <img class="image-block__image" 
+                alt="Forest"
+                srcset="./public/forest_400.jpg 1x, ./public/forest_768.jpg 2x"
+                src="./public/forest_768.jpg">
+        </div>
     </body>
 </html>
