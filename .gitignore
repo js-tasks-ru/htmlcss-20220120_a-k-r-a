@@ -4,3 +4,6 @@ node_modules
 package-lock.json
 yarn.lock
 .DS_Store
+
+05-lection3/03-calendar/calendar_solution_with_flex.css
+05-lection3/03-calendar/index_solution_with_flex.html
