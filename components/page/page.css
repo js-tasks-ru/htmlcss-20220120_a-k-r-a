@@ -1,0 +1,10 @@
+@import '../container/container.css';
+@import '../header/header.css';
+@import '../main/main.css';
+@import '../footer/footer.css';
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
