@@ -21,8 +21,11 @@
 }
 
 /* Right part of the header */
-.histogram__view-link {
+.histogram__view {
   margin-left: auto;
+}
+
+.histogram__view-link {
   color: var(--blue);
   text-decoration: none;
 }
