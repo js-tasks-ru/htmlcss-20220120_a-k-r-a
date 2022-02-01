@@ -15,8 +15,8 @@ Now it doesn't work. */
 }
 
 .card__component-preview {
-  display: flex;
-  align-self: center;
+  /* display: flex;
+  align-self: center; */
   margin-bottom: 75px;
 }
 
