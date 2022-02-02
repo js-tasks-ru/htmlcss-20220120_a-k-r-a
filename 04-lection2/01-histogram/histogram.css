@@ -1,5 +1,6 @@
 /* Histogram-container */
 .histogram {
+  width: 100%;
   padding: 1rem 1.5rem 1.5rem;
   border: 1px solid var(--grey-3);
   border-radius: var(--border-radius);
@@ -39,7 +40,7 @@
 .histogram__body {
   display: flex;
   align-items: flex-end;
-  height: 200px;
+  height: 100px;
 }
 
 .histogram__col {
