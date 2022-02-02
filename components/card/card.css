@@ -1,10 +1,12 @@
-:root {
-  --opacity: .1;
-}
-/* To fix: :root -> .card 
-Now it doesn't work. */
-
 .card {
+  --opacity: .05;
+  --grey-neutral-dark: rgba(
+    var(--grey-neutral-dark-r),
+    var(--grey-neutral-dark-g),
+    var(--grey-neutral-dark-b),
+    var(--opacity)
+  );
+
   display: flex;
   flex-direction: column;
   padding: 80px 24px 30px 24px;
@@ -15,7 +17,8 @@ Now it doesn't work. */
 }
 
 .card__component-preview {
-  margin-bottom: auto;
+  display: flex;
+  flex-grow: 1;
 }
 
 .card__title {
