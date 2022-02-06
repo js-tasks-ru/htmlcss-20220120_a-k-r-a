@@ -47,6 +47,7 @@
   --grey-7: #E3E7EA;
   --grey-8: #334D6E;
   --grey-9: #90A0B7;
+  --grey-10: #F9FAFC;
 
   --opacity: 1;
 
@@ -62,7 +63,9 @@
   --alternate: var(--grey-3);
   --alternate-additional: var(--black);
 
+  --border-radius-small: 4px;
   --border-radius: 8px;
+  --border-radius-large: 12px;
 
   --transition-duration-normal: .3s;
   --transition-function-normal: ease-in-out;
