@@ -1,6 +1,4 @@
-/*-------------------------------------------------------------------------*/
 /* main layout */
-/*-------------------------------------------------------------------------*/
 .component-page {
   display: grid;
   grid-template-rows: 80px 1fr auto;
@@ -17,7 +15,7 @@
   height: 100%;
 }
 
-.component-page__content {
+.component-page__main {
   display: flex;
   justify-self: stretch;
   align-self: stretch;
@@ -30,7 +28,7 @@
   z-index: 200;
 }
 
-.component-page__component-container {
+.component-page__component {
   flex: 1;
   height: 100%;
   padding: 2rem 3rem;
@@ -58,13 +56,9 @@
   text-transform: uppercase;
   color: var(--grey-3)
 }
-/*-------------------------------------------------------------------------*/
 /* END main layout */
-/*-------------------------------------------------------------------------*/
 
-/*-------------------------------------------------------------------------*/
 /* header area */
-/*-------------------------------------------------------------------------*/
 .component-page__header-controls {
   display: flex;
   justify-content: space-between;
@@ -73,17 +67,9 @@
 .component-page__burger {
   display: none;
 }
-
-.component-page__logo {
-
-}
-/*-------------------------------------------------------------------------*/
 /* END header area */
-/*-------------------------------------------------------------------------*/
 
-/*-------------------------------------------------------------------------*/
 /* navigation */
-/*-------------------------------------------------------------------------*/
 .component-page__nav-title {
   margin-bottom: 1rem;
 
@@ -120,13 +106,9 @@
 .component-page__nav-link:not(.active):hover {
   text-decoration: underline;
 }
-/*-------------------------------------------------------------------------*/
 /* END navigation */
-/*-------------------------------------------------------------------------*/
 
-/*-------------------------------------------------------------------------*/
 /* component */
-/*-------------------------------------------------------------------------*/
 .component-page__title {
   margin-bottom: 1.5rem;
 
@@ -134,73 +116,24 @@
   line-height: 2.375rem;
   color: var(--grey-4);
 }
-/*-------------------------------------------------------------------------*/
 /* END component */
-/*-------------------------------------------------------------------------*/
 
-/*-------------------------------------------------------------------------*/
-/* mobile versions  */
-/*-------------------------------------------------------------------------*/
-
-.component-page__nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 428px;
-  margin: 0;
-  padding: 1rem;
-  background-color: var(--red);
-}
-
-.component-page__nav-mobile_open {
-  display: block;
-}
-
-.component-page__nav-mobile_closed {
-  display: none;
-}
-
-.component-page__overlay {
-  position: absolute;
-  display: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-
-  background-color: var(--grey-4);
-  opacity: .3;
-}
-
-/*-------------------------------------------------------------------------*/
 /* max-width: 1200px */
-/*-------------------------------------------------------------------------*/
 @media screen and (max-width: 1200px) {
   .component-page {
     padding: 0 16px;
   }
 }
-/*-------------------------------------------------------------------------*/
 /* END max-width: 1200px */
-/*-------------------------------------------------------------------------*/
 
-/*-------------------------------------------------------------------------*/
 /* max-width: 768px */
-/*-------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  /* .component-page {
-    display: block;
-  } */
-
   .component-page {
     grid-template-rows: auto 1fr auto;
     grid-gap: 0;
   }
 
-  .component-page__content {
+  .component-page__main {
     display: block;
   }
 
@@ -228,28 +161,11 @@
     border-top: 1px solid var(--grey-2);
     border-bottom: 1px solid var(--grey-2);
   }
-
-/* ----------------------- HIER */
-  .component-page__overlay {
-    /* display: block; */
-  }
-
-  .component-page__header {
-    background-color: var(--grey-10);
-  }
-  .component-page__footer {
-
-  }
 }
-/*-------------------------------------------------------------------------*/
 /* END max-width: 768px */
-/*-------------------------------------------------------------------------*/
 
-/*-------------------------------------------------------------------------*/
 /* max-width: 375px */
 @media screen and (max-width: 375px) {
-
+ /**/
 }
-/*-------------------------------------------------------------------------*/
 /* END max-width: 375px */
-/*-------------------------------------------------------------------------*/
