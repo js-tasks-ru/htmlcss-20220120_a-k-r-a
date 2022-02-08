@@ -1,7 +1,6 @@
 .tooltip {
-  --val1: 4px;
-  --val2: 16px;
-  /* --val1 and --val2 play together */
+  --arrow-height: 8px; 
+  --distance-to-arrow: 4px;
 }
 
 .tooltip {
@@ -11,7 +10,10 @@
 
 .tooltip__message {
   position: absolute;
-  bottom: calc(100% + var(--val1)); /* Moves the element to top of its position by: its height + freely chosen distance */
+  z-index: 100;
+  bottom: calc(100% + var(--arrow-height) + var(--distance-to-arrow)); 
+  /* calc moves the element to top of its position + --arrow-height */
+
   left: 50%;
   transform: translate(-50%, 0); 
 
@@ -20,6 +22,7 @@
   align-items: center;
 
   opacity: 0;
+  visibility: hidden;
 }
 
 .tooltip__message-body {
@@ -33,24 +36,26 @@
   color: var(--grey-2);
 }
 
-.tooltip__message-marker {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  transform: rotate(45deg);
-  margin-top: -8px;
-  z-index: -1; /* Marker should be under the message-text */
-  background-color: var(--primary);
+.tooltip__message-body::after {
+  position: absolute;
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(0px - var(--arrow-height) * 2);
+  border: var(--arrow-height) solid transparent;
+  border-top-color: var(--primary);
 }
 
 .tooltip__icon {
   display: block;
   width: 24px;
   height: 24px;
+  position: relative;
+  z-index: 200;
   background: url(../../assets/images/icons/help.svg);
   background-position: center center;
   background-repeat: no-repeat;
-  padding: var(--val2); /* Increases the touch aria of the icon */
+  padding: var(--touch-area-enlargement); /* Increases the touch aria of the icon */
 }
 
 .tooltip__icon:hover {
@@ -59,5 +64,12 @@
 
 .tooltip__icon:hover + .tooltip__message {
   opacity: 1;
+  visibility: visible;
   transition: opacity .3s linear;
 }
+
+/* 
+Note: 
+The info-icon should be above the message-area with its small arrow to avoid hover-collisions. 
+Because of this problem z-indexes are necessary.
+*/
