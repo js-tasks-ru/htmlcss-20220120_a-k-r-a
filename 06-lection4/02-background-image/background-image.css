@@ -4,15 +4,10 @@ body {
 }
 
 body {
+  background-image: url("public/forest_400.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-}
-
-@media (max-width: 399.98px) {
-  body {
-    background-image: url("public/forest_400.jpg");
-  }
 }
 
 @media (min-width: 400px) {
