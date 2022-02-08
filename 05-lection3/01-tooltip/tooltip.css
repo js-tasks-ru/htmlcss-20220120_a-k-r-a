@@ -1,0 +1,76 @@
+.tooltip {
+  --arrow-height: 8px; 
+  --distance-to-arrow: 4px;
+  --touch-area-enlargement: 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip__message {
+  position: absolute;
+  z-index: 100;
+  bottom: calc(100% + var(--arrow-height) + var(--distance-to-arrow)); 
+  /* calc moves the element to top of its position + --arrow-height */
+
+  left: 50%;
+  transform: translate(-50%, 0); 
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip__message-body {
+  position: relative;
+  padding: .75rem 1.25rem;
+
+  border-radius: var(--border-radius);
+  background-color: var(--primary);
+  white-space: nowrap;
+  font-weight: 400;
+  color: var(--grey-2);
+}
+
+.tooltip__message-body::after {
+  position: absolute;
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(0px - var(--arrow-height) * 2);
+  border: var(--arrow-height) solid transparent;
+  border-top-color: var(--primary);
+}
+
+.tooltip__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 200;
+  background: url(../../assets/images/icons/help.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: var(--touch-area-enlargement); /* Increases the touch aria of the icon */
+}
+
+.tooltip__icon:hover {
+  cursor: pointer;
+}
+
+.tooltip__icon:hover + .tooltip__message {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s linear;
+}
+
+/* 
+Note: 
+The info-icon should be above the message-area with its small arrow to avoid hover-collisions. 
+Because of this problem z-indexes are necessary.
+*/
