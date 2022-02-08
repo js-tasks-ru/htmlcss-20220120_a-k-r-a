@@ -1,6 +1,7 @@
 .tooltip {
   --arrow-height: 8px; 
   --distance-to-arrow: 4px;
+  --touch-area-enlargement: 0;
 }
 
 .tooltip {
