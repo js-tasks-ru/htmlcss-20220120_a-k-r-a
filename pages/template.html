@@ -6,52 +6,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../components/container/container.css">
-  <link rel="stylesheet" href="../components/header/header.css">
-  <link rel="stylesheet" href="../components/footer/footer.css">
-  <link rel="stylesheet" href="../components/component-page/component-page.css">
+  <link rel="stylesheet" href="../components/template/template.css">
+  <link rel="stylesheet" href="../components/component/component.css">
   <title>Template for a component page</title>
 </head>
 
-<body class="component-page">
+<body class="template">
+  <div class="container container_template">
+    <div class="template__rows">
 
-  <header class="header component-page__header">
-    <div class="container component-page__header-controls">
-      <div class="component-page__burger">placeholder burger</div>
-      <a href="#" class="component-page__logo"><img src="../assets/images/logo.svg" alt="To page with all preview components"></a>
-      <div class="component-page__theme-toggler">placeholder theme-toggler</div>
-    </div>
-  </header>
+      <header class="header header_template">
+        <div class="header__controls">
+          <div class="header__burger">placeholder burger</div>
+          <a href="#" class="header__logo"><img src="../assets/images/logo.svg"
+              alt="To the page with all component previews">
+          </a>
+          <div class="header__theme-toggler">placeholder theme-toggler</div>
+        </div>
+      </header>
 
-  <main>
-    <div class="container component-page__container">
-      <div class="component-page__main">
-        <nav class="component-page__nav">
-          <div class="component-page__nav-title">Components</div>
-          <ul class="component-page__nav-links">
-            <li><a href="#" class="component-page__nav-link">Modal</a></li>
-            <li><a href="#" class="component-page__nav-link">Tooltip</a></li>
-            <li><a href="#" class="component-page__nav-link">Avatar</a></li>
-            <li><a href="#" class="component-page__nav-link">Calendar</a></li>
-            <li><a href="#" class="component-page__nav-link active">Histogram</a></li>
-            <li><a href="#" class="component-page__nav-link">Custom form elements</a></li>
-            <li><a href="#" class="component-page__nav-link">Main page</a></li>
+      <main class="template__middle">
+        <nav class="nav">
+          <div class="nav__title">Components</div>
+          <ul class="nav__links">
+            <li class="nav__links-item"><a href="#" class="nav__link">Modal main_template</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Tooltip</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Avatar</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Calendar</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link nav__link_active">Histogram</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Custom form elements</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Main page</a></li>
           </ul>
         </nav>
-        <div class="component-page__component">
-          <h1 class="component-page__title">Component title</h1>
+        <div class="component">
+          <h1 class="component__title">Component title</h1>
           Component card
         </div>
-      </div>
-    </div>
-  </main>
+      </main>
 
-  <footer class="footer component-page__footer">
-    <div class="container">
-      Reusable component library
-    </div>
-  </footer>
+      <footer class="footer footer_template">
+        <div class="footer__text_template">Reusable component library</div>
+      </footer>
 
+    </div>
+  </div>
 </body>
 
 </html>

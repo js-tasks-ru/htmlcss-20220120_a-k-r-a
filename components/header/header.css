@@ -2,3 +2,42 @@
   padding: 96px 0 76px;
   background-color: var(--white);
 }
+
+.header__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__burger {
+  display: none;
+}
+
+/* modefier for different pages */
+.header_template {
+  padding: 28px 0 0;
+  background-color: transparent;
+}
+
+/* mobile variants */
+@media screen and (max-width: 768px) {
+  .header__controls {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .header__burger {
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .header__theme-toggler {
+    margin: 1rem 0;
+    padding: 28px 0 24px;
+    border-top: 1px solid var(--grey-2);
+    border-bottom: 1px solid var(--grey-2);
+  }
+}
