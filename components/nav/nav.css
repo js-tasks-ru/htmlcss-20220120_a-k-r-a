@@ -1,11 +1,5 @@
-/* .nav {
-  flex-basis: 230px;
-  margin-right: 56px;
-} */
-
 .nav__title {
   margin-bottom: 1rem;
-
   font-size: 1.25rem;
   line-height: 1.625rem;
 }
@@ -40,8 +34,13 @@
   text-decoration: underline;
 }
 
+.template__middle-nav {
+  margin-top: 1.5rem;
+}
+
 @media screen and (max-width: 768px) {
   .nav {
     display: none;
   }
 }
+
