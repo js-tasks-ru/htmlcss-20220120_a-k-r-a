@@ -21,6 +21,11 @@
   margin-top: 0;
 }
 
+/* modefiers for different pages */
+.footer_transparent {
+  background-color: transparent;
+}
+
 .footer__text_template {
   font-weight: 500;
   font-size: 0.75rem;
@@ -30,11 +35,8 @@
   color: var(--grey-3)
 }
 
-/* modefiers for different pages */
-.footer_transparent {
-  background-color: transparent;
-}
-
-.footer_template {
-  padding-top: 36px;
+@media screen and (max-width: 768px) {
+  .footer{
+    padding-bottom: 36px;
+  }
 }

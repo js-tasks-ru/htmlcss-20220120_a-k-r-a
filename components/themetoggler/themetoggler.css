@@ -4,31 +4,27 @@
   align-items: top;
 }
 
-.themetoggler__label {
-  display: none
+.themetoggler__controls {
+  display: flex;
 }
 
-.themetoggler__label,
-.themetoggler__toggler,
-.themetoggler__icon {
-  margin-right: 13px;
+.themetoggler__label {
+  display: none
 }
 
 .themetoggler__toggler {
   max-height: 28px;
 }
 
-.themetoggler__icon:last-child {
-  margin-right: 0;
-}
-
-.theme-toggler__controls {
-  display: flex;
-}
-
 .themetoggler__icon {
   display: inline-block;
   align-self: flex-start;
+}
+
+.themetoggler__label,
+.themetoggler__toggler,
+.themetoggler__icon:not(:last-child) {
+  margin-right: 13px;
 }
 
 @media screen and (max-width: 768px) {
@@ -41,7 +37,7 @@
   }
 
   .themetoggler__toggler {
-    display: block; /* provisorisch */ 
+    display: block; /* temporary */ 
   }
 }
 

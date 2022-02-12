@@ -25,7 +25,6 @@
 
 .navtabs__label:hover,
 .navtabs__label_active {
-  /* position: relative; */
   color: var(--black);
 }
 
@@ -42,9 +41,6 @@
 .navtabs__item_active::after {
   background-color: green;
 }
-/* .nav-tabs__link_active::after {
-  width: 100%;
-} */
 
 .navtabs__link:hover::after {
   width: 100%;

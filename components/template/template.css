@@ -25,7 +25,7 @@
 @media screen and (max-width: 768px) {
   .template__rows {
     grid-template-rows: auto 1fr auto;
-    grid-gap: 16px;
+    row-gap: 16px;
   }
 
   .template__middle {

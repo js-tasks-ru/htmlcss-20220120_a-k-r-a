@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../components/template/template.css">
   <link rel="stylesheet" href="../components/metanavi/metanavi.css">
-  <link rel="stylesheet" href="../components/theme-toggler/theme-toggler.css">
+  <link rel="stylesheet" href="../components/themetoggler/themetoggler.css">
   <link rel="stylesheet" href="../components/component/component.css">
-  <link rel="stylesheet" href="../components/navtabs/nav-tabs.css">
+  <link rel="stylesheet" href="../components/navtabs/navtabs.css">
   <title>Template for a component page</title>
   <style>
     .hide {
@@ -51,8 +51,8 @@
                 <label for="toggler" class="themetoggler__label">Dark mode</label>
                 <div class="themetoggler__controls" id="toggler">
                   <img class="themetoggler__icon" src="../assets/images/icons/sun.svg" alt="">
-                  <img class="themetoggler__toggler" src="../assets/images/icons/toggler_dummy.svg"  alt="">
-                  <!-- <span class="themetoggler__toggler">placeholder toggler</span> -->
+                  <!-- temporary as image: -->
+                  <img class="themetoggler__toggler" src="../assets/images/icons/toggler_dummy.svg"  alt="">                
                   <img class="themetoggler__icon" src="../assets/images/icons/moon.svg" alt="">
                 </div>
               </div>
@@ -84,13 +84,13 @@
               <label class="navtabs__label navtabs__label_active">item 1</label>
             </li>
             <li class="navtabs__item">
-              <span class="nav-tabs__label">item 2</span>
+              <span class="navtabs__label">item 2</span>
             </li>
           </ul>
         </div>
       </main>
 
-      <footer class="footer footer_transparent footer-template" id="footer">
+      <footer class="footer footer_transparent" id="footer">
         <div class="footer__text_template">Reusable component library</div>
       </footer>
 
@@ -109,11 +109,17 @@
       const largeWindow = window.matchMedia('(min-width: 768px)');
       largeWindow.addListener(resetModalMenu);
       if (largeWindow.matches) {
-        document.getElementById('component').classList.add('show');
-        document.getElementById('footer').classList.add('show');
-      } else {
+        document.getElementById('nav').classList.remove('show');
+        document.getElementById('nav').classList.remove('hide');
+
+        document.getElementById('header__groupwrapper').classList.remove('show');
+        document.getElementById('header__groupwrapper').classList.remove('hide');
+
         document.getElementById('component').classList.remove('show');
-        document.getElementById('footer').classList.remove('show');
+        document.getElementById('component').classList.remove('hide');
+
+        document.getElementById('footer').classList.add('show');
+        document.getElementById('footer').classList.add('hide');
       }
     }
 
