@@ -3,9 +3,9 @@
   --black: #212429;
   --blue: #4263EB;
 
-  --blue-dark-r: 66;
-  --blue-dark-g: 99;
-  --blue-dark-b: 235;
+  --blue-dark-r: 35;
+  --blue-dark-g: 66;
+  --blue-dark-b: 192;
   --blue-dark: rgba(
       var(--blue-dark-r), 
       var(--blue-dark-g), 
