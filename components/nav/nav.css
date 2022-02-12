@@ -10,11 +10,11 @@
   list-style-type: none;
 }
 
-.nav__links-item {
+.nav__linksitem {
   margin-bottom: 0.25rem;
 }
 
-.nav__links .nav__links-item:last-child {
+.nav__links .nav__linksitem:last-child {
   margin-top: 1.625rem;
 }
 

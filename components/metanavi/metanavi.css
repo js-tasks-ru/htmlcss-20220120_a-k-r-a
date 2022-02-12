@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-.metanavi__list-item:not(:last-child) {
+.metanavi__listitem:not(:last-child) {
   margin-right: 1.5rem;
 }
 
@@ -20,4 +20,10 @@
 .metanavi__link:hover {
   text-decoration: underline;
   color: var(--black);
+}
+
+@media screen and (max-width: 500px) {
+  .metanavi__list {
+    flex-wrap: wrap;
+  }
 }

@@ -1,5 +1,5 @@
 .footer {
-  padding: 72px 0 96px;
+  padding: 20px 0 56px;
   text-align: center;
   background-color: var(--white);
 }
@@ -31,7 +31,10 @@
 }
 
 /* modefiers for different pages */
-.footer_template {
-  padding: 3.25rem 0 2rem 0;
+.footer_transparent {
   background-color: transparent;
+}
+
+.footer_template {
+  padding-top: 36px;
 }

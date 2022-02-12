@@ -1,6 +1,10 @@
 .header {
-  padding: 96px 0 76px;
   background-color: var(--white);
+  padding-top: 24px;
+}
+
+.header_transparent {
+  background-color: transparent;
 }
 
 .header__controls {
@@ -17,58 +21,59 @@
   display: none;
 }
 
-/* modefier for different pages */
-.header_template {
-  padding: 28px 0 0;
-  background-color: transparent;
+.header__logoimage {
+  display: inline-block;
 }
 
 /* mobile variants */
 @media screen and (max-width: 768px) {
-  .header__group {
-    display: none;
+  .header {
+    padding-top: 16px;
   }
 
   .header__controls {
     flex-direction: column;
   }
 
-  .header__logo {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .header__burger {
-    z-index: 100;
-    display: inline-block;
-    position: absolute;
+  .header__groupwrapper {
+    display: none;
   }
 
-  .header__burger-checkbox:hover {
-    cursor: pointer;
-  }
-  
   .header__group {
     display: block;
   }
 
-  .header__group-metanavi {
-    margin-top: 1.5rem;
-  }
-
-  .header__group-metanavi,
-  .header__group-theme-toggler {
+  .header__groupitem{
     padding: 1.5rem 0;
     border-top: 1px solid var(--grey-2);
   }
+  
+  .header__groupitem:first-child {
+    margin-top: 1.5rem;
+  }
 
-  .header__group-theme-toggler {
+  .header__groupitem:last-child {
     border-bottom: 1px solid var(--grey-2);
   }
   
-  .header__theme-toggler {
+  .header__burger {
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .header__burgercheckbox:hover {
+    cursor: pointer;
+  }
+
+  .header__logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .header__themetoggler {
     margin: 1rem 0;
-    padding: 28px 0 24px;
+    /* padding: 28px 0 24px; */
     border-top: 1px solid var(--grey-2);
     border-bottom: 1px solid var(--grey-2);
   }

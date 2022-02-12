@@ -1,4 +1,4 @@
-/* component-page layout */
+/* layout for a component-page */
 .template {
   background-color: var(--grey-10);
 }
@@ -16,20 +16,20 @@
   grid-gap: 56px;
 }
 
+@media screen and (max-width: 1200px) {
+  .template {
+    padding: 0 16px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .template__rows {
     grid-template-rows: auto 1fr auto;
-    grid-gap: 0;
+    grid-gap: 16px;
   }
 
   .template__middle {
     display: flex;
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .template {
-    padding: 0 16px;
   }
 }

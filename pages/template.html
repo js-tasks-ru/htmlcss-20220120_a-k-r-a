@@ -14,7 +14,6 @@
   <title>Template for a component page</title>
   <style>
     .hide {
-      border: 1px solid red;
       display: none;
     }
 
@@ -25,35 +24,41 @@
 </head>
 
 <body class="template">
-  <div class="container container_template">
+  <div class="container container_fullheight">
     <div class="template__rows">
 
-      <header class="header header_template">
+      <header class="header header_transparent">
         <div class="header__controls">
           <div class="header__burger">
-            <button class="header__burger-checkbox" onclick="toggleModalMenu()">burger</button>
+            <button class="header__burgercheckbox" onclick="toggleModalMenu()">burger</button>
           </div>
-          <a href="#" class="header__logo"><img src="../assets/images/logo.svg"
+          <a href="#" class="header__logo">
+            <img class="header__logoimage" src="../assets/images/logo.svg"
               alt="To the page with all component previews">
           </a>
 
-          <div class="header__group">
-            <nav class="metanavi header__group-metanavi" id="metanavi">
-              <ul class="metanavi__list">
-                <li class="metanavi__list-item"><a class="metanavi__link_active" href="#">Components</a></li>
-                <li class="metanavi__list-item"><a class="metanavi__link" href="#">About</a></li>
-                <li class="metanavi__list-item"><a class="metanavi__link" href="#">Contact</a></li>
-              </ul>
-            </nav>
-            <div class="theme-toggler header__group-theme-toggler">
-              <label for="toggler" class="theme-toggler__label">Dark mode</label>
-              <span class="theme-toggler__controls" id="toggler">
-                <img class="theme-toggler__image" src="../assets/images/icons/sun.svg" alt="">
-                <img class="theme-toggler__toggler" src="../assets/images/icons/toggler_dummy.svg" alt="">
-                <img class="theme-toggler__image" src="../assets/images/icons/moon.svg" alt="">
-              </span>
+          <div class="header__groupwrapper" id="header__groupwrapper">
+            <div class="header__group" id="header__group">
+              <nav class="metanavi header__groupitem" id="metanavi">
+                <ul class="metanavi__list">
+                  <li class="metanavi__listitem"><a class="metanavi__link_active" href="#">Components</a></li>
+                  <li class="metanavi__listitem"><a class="metanavi__link" href="#">About</a></li>
+                  <li class="metanavi__listitem"><a class="metanavi__link" href="#">Contact</a></li>
+                </ul>
+              </nav>
+
+              <div class="themetoggler header__groupitem">
+                <label for="toggler" class="themetoggler__label">Dark mode</label>
+                <div class="themetoggler__controls" id="toggler">
+                  <img class="themetoggler__icon" src="../assets/images/icons/sun.svg" alt="">
+                  <img class="themetoggler__toggler" src="../assets/images/icons/toggler_dummy.svg"  alt="">
+                  <!-- <span class="themetoggler__toggler">placeholder toggler</span> -->
+                  <img class="themetoggler__icon" src="../assets/images/icons/moon.svg" alt="">
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
       </header>
 
@@ -85,19 +90,34 @@
         </div>
       </main>
 
-      <footer class="footer footer_template" id="footer">
+      <footer class="footer footer_transparent footer-template" id="footer">
         <div class="footer__text_template">Reusable component library</div>
       </footer>
 
     </div>
   </div>
+
   <script>
     function toggleModalMenu() {
       document.getElementById('nav').classList.toggle('show');
-      document.getElementById('header__group').classList.toggle('show');
+      document.getElementById('header__groupwrapper').classList.toggle('show');
       document.getElementById('component').classList.toggle('hide');
       document.getElementById('footer').classList.toggle('hide');
     }
+
+    function resetModalMenu() {
+      const largeWindow = window.matchMedia('(min-width: 768px)');
+      largeWindow.addListener(resetModalMenu);
+      if (largeWindow.matches) {
+        document.getElementById('component').classList.add('show');
+        document.getElementById('footer').classList.add('show');
+      } else {
+        document.getElementById('component').classList.remove('show');
+        document.getElementById('footer').classList.remove('show');
+      }
+    }
+
+    resetModalMenu();
   </script>
 
 </body>
