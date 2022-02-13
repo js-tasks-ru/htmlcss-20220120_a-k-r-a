@@ -1,0 +1,35 @@
+.label {
+  font-size: .75rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--grey3);
+}
+
+.input_text {
+  padding: 16px 24px;
+  border: 1px solid var(--grey-2);
+  border-radius: var(--border-radius);
+  color: var(--grey-2);
+}
+
+.input_text-success::placeholder,
+.input_text-error::placeholder {
+  color: var(--grey-4);
+}
+
+.input_text-success {
+  background-image: url(../../assets/images/icons/check-circle.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  border-color: var(--primary);
+  color: var(--grey-4);
+}
+
+.input_text-error {
+  background-image: url(../../assets/images/icons/alert-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  border-color: var(--error);
+  color: var(--grey-4);
+}

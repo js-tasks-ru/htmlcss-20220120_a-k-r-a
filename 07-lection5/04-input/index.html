@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <!-- Страница с полем ввода -->
-<html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./input.css">
-    </head>
-    <body>
+<html lang="en">
 
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./input.css">
+    <title>Fields input</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 100px auto;
+            max-width: 400px;
+        }
+
+        .input_text-container {
+            margin-bottom: 2rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="f1" class="label">Label</label>
+        <input type="text" placeholder="placeholder" id="f1" class="input_text-container input_text">
+
+        <label for="f2" class="label">Focus</label>
+        <input type="text" placeholder="Filled Input" id="f1" class="input_text-container input_text">
+
+        <label for="f3" class="label">Success</label>
+        <input type="text" placeholder="Success" id="f1" class="input_text-container input_text input_text-success">
+
+        <label for="f4" class="label">Error</label>
+        <input type="text" placeholder="Error" id="f1" class="input_text-container input_text input_text-error">
+    </div>
+</body>
+
 </html>
