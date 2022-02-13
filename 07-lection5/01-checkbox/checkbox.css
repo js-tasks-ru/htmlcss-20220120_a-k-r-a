@@ -1,13 +1,16 @@
+/* formatting and position */
 .checkbox {
-  --border-radius: 4px;
+  position: relative;
 }
 
-/* .checkbox__input {
+.checkbox__input {
   position: absolute;
-  clip: rect (0, 0, 0, 0);
+  width: 0;
+  height: 0;
   opacity: 0;
   outline: none;
-}*/
+  background-image: none;
+}
 
 .checkbox__state {
   display: inline-flex;
@@ -18,12 +21,7 @@
   width: 28px;
   height: 28px;
   margin-right: .75rem;
-  border-radius: var(--border-radius);
-}
-
-.checkbox__control:not(:checked) {
-  border: 1px solid var(--grey-2);
-  background-color: var(--white);
+  border-radius: var(--border-radius-small);
 }
 
 .checkbox__label {
@@ -31,7 +29,16 @@
   font-size: 1rem;
   color: var(--grey-4);
 }
+/* END formatting and position */
 
+/* states */
+/* default */
+.checkbox__control:not(:checked) {
+  border: 1px solid var(--grey-2);
+  background-color: var(--white);
+}
+
+/* checked */
 .checkbox__input:checked ~ .checkbox__state .checkbox__control {
   border: none;
   background-color: var(--primary);
@@ -40,22 +47,11 @@
   background-repeat: no-repeat;
 }
 
-.checkbox__input:not(:disabled) ~ .checkbox__state {
-  cursor: pointer;
-}
-
-.checkbox__input:disabled ~ .checkbox__state {
-  cursor: not-allowed;
-}
-
-.checkbox__input:not(:disabled):hover ~ .checkbox__state .checkbox__control {
-  background-color: var(--primary-additional);
-}
-
-.checkbox__input:not(:disabled):hover ~ .checkbox__state .checkbox__label {
+.checkbox__input:not(:disabled):checked ~ .checkbox__state .checkbox__label {
   text-decoration: underline;
 }
 
+/* disabled */
 .checkbox__input:disabled ~ .checkbox__state .checkbox__control {
   border: none;
   background-color: var(--grey-2);
@@ -64,3 +60,23 @@
 .checkbox__input:disabled ~ .checkbox__state .checkbox__label {
   color: var(--grey-2);
 }
+
+.checkbox__input:disabled ~ .checkbox__state {
+  cursor: not-allowed;
+}
+
+/* hover */
+.checkbox__input:not(:disabled) ~ .checkbox__state {
+  cursor: pointer;
+}
+
+.checkbox__input:not(:disabled):hover ~ .checkbox__state .checkbox__label {
+  text-decoration: underline;
+}
+
+/* focus */
+.checkbox__input:focus ~ .checkbox__state {
+  outline-offset: 2px;
+  outline: 1px solid var(--red);
+}
+/* END states */

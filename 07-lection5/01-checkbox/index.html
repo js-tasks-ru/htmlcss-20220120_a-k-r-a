@@ -23,7 +23,7 @@
             flex-direction: column;
         }
 
-        .container .checkbox {
+        .check-container {
             margin-bottom: 1rem;
         }
     </style>
@@ -32,7 +32,7 @@
 <body>
 
     <div class="container">
-        <label class="checkbox" tabindex="0">
+        <label class="checkbox check-container">
             <input class="checkbox__input" type="checkbox" tabindex="0">
             <div class="checkbox__state">
                 <span class="checkbox__control"></span>
@@ -40,7 +40,7 @@
             </div>
         </label>
 
-        <label class="checkbox" tabindex="0">
+        <label class="checkbox check-container">
             <input class="checkbox__input" type="checkbox" checked tabindex="0">
             <div class="checkbox__state">
                 <span class="checkbox__control"></span>
@@ -48,8 +48,8 @@
             </div>
         </label>
 
-        <label class="checkbox" tabindex="0">
-            <input class="checkbox__input" type="checkbox" disabled tabindex="0">
+        <label class="checkbox check-container">
+            <input class="checkbox__input" type="checkbox" disabled>
             <div class="checkbox__state">
                 <span class="checkbox__control"></span>
                 <span class="checkbox__label">Disabled</span>
