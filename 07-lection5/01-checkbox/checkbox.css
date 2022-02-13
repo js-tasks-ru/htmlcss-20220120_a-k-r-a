@@ -14,13 +14,12 @@
 
 .checkbox__state {
   display: inline-flex;
+  gap: .75rem;
 }
 
 .checkbox__control {
-  display: inline-flex;
   width: 28px;
   height: 28px;
-  margin-right: .75rem;
   border-radius: var(--border-radius-small);
 }
 
