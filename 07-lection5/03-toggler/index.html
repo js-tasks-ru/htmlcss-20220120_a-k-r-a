@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <!-- Страница с кнопкой переключения -->
-<html lang="ru">
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./toggler.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+            <link rel="stylesheet" href="../../assets/css/main.css">
+            <link rel="stylesheet" href="./toggler.css">
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
+    
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .container {
+                display: inline-flex;
+                flex-direction: column;
+            }
+    
+            .toggler-container {
+                margin-bottom: 1rem;
+            }
+        </style>
     </head>
+    
     <body>
-
+    
+        <div class="container">
+            <label class="toggler toggler-container">
+                <input class="toggler__input" type="checkbox" tabindex="0">
+                <div class="toggler__state">
+                    <span class="toggler__control"></span>
+                    <span class="toggler__label"></span>
+                </div>
+            </label>
+    
+            <label class="toggler toggler-container">
+                <input class="toggler__input" type="checkbox" checked tabindex="0">
+                <div class="toggler__state">
+                    <span class="toggler__control"></span>
+                    <span class="toggler__label"></span>
+                </div>
+            </label>
+    
+            <label class="toggler toggler-container">
+                <input class="toggler__input" type="checkbox" disabled>
+                <div class="toggler__state">
+                    <span class="toggler__control"></span>
+                    <span class="toggler__label"></span>
+                </div>
+            </label>
+        </div>
+    
     </body>
-</html>
+    </html>
