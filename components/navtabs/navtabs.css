@@ -17,6 +17,11 @@
   color: var(--black);
   transition: .2s color ease;
 }
+
+.navtabs__allitems {
+  padding-top: 72px;
+  border-top: 1px solid var(--grey-3);
+}
 /* END layout and formatting */
 
 /* hover and active state */
@@ -48,7 +53,7 @@
   width: 100%;
   transition: .2s width ease;
 }
-/* END underline */
+/* END hover and active state */
 
 .navtabs__control {
   opacity: 0;
@@ -58,11 +63,7 @@
   padding: 0;
 }
 
-.container__allitems {
-  border-top: 1px solid var(--grey-3);
-}
-
-/* activate content */
+/* activating content */
 .navtabs__content {
   display: none;
 }
@@ -79,3 +80,4 @@
 #item2:checked ~ [data-content="all_items"] [data-content="content2"] {
   display: block;
 }
+/* END activating content */
