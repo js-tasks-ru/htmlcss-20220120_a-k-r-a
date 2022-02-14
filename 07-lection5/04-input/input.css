@@ -1,35 +1,60 @@
-.label {
-  font-size: .75rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--grey3);
+/* Container outer */
+.container {
+  margin: auto;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
-.input_text {
+.input-container {
+  margin-bottom: 1rem;
+}
+/* END Container outer */
+
+/* Component input */
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__hint {
+  margin-top: 0.2rem;
+}
+
+.input__label {
+  font-size: .75rem;
+  margin-bottom: .3125rem;
+  line-height: 1.125;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--grey-3);
+}
+
+.input__inputtext {
+  width: 100%;
   padding: 16px 24px;
   border: 1px solid var(--grey-2);
   border-radius: var(--border-radius);
   color: var(--grey-2);
 }
 
-.input_text-success::placeholder,
-.input_text-error::placeholder {
+.input__inputtext-success::placeholder,
+.input__inputtext-error::placeholder {
   color: var(--grey-4);
 }
 
-.input_text-success {
+.input__inputtext-success,
+.input__inputtext-error {
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.input__inputtext-success {
   background-image: url(../../assets/images/icons/check-circle.svg);
-  background-repeat: no-repeat;
-  background-position: right 16px center;
   border-color: var(--primary);
-  color: var(--grey-4);
 }
 
-.input_text-error {
+.input__inputtext-error {
   background-image: url(../../assets/images/icons/alert-triangle.svg);
-  background-repeat: no-repeat;
-  background-position: right 16px center;
   border-color: var(--error);
-  color: var(--grey-4);
 }
