@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <!-- Страница радио -->
-<html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./radio.css">
-    </head>
-    <body>
+<head>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./radio.css">
+    <title>Checkbox</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
 
-    </body>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-container {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <p>You can switch between the groups using tab.<br>You can switch between the radio buttons using arrows.</p>
+    <fieldset class="container">
+        <legend>Group 1</legend>
+        <label class="radio radio-container">
+            <input class="radio__input" type="radio" name="x">
+            <div class="radio__state">
+                <span class="radio__control"></span>
+                <span class="radio__label">Default</span>
+            </div>
+        </label>
+
+        <label class="radio radio-container">
+            <input class="radio__input" type="radio" name="x" checked>
+            <div class="radio__state">
+                <span class="radio__control"></span>
+                <span class="radio__label">Selected</span>
+            </div>
+        </label>
+
+        <label class="radio radio-container">
+            <input class="radio__input" type="radio"  name="x" disabled>
+            <div class="radio__state">
+                <span class="radio__control"></span>
+                <span class="radio__label">Disabled</span>
+            </div>
+        </label>
+    </fieldset>
+
+    <fieldset class="container">
+        <legend>Group 2</legend>
+        <label class="radio radio-container">
+            <input class="radio__input" type="radio" name="y">
+            <div class="radio__state">
+                <span class="radio__control"></span>
+                <span class="radio__label">Default</span>
+            </div>
+        </label>
+
+        <label class="radio radio-container">
+            <input class="radio__input" type="radio" name="y" checked>
+            <div class="radio__state">
+                <span class="radio__control"></span>
+                <span class="radio__label">Selected</span>
+            </div>
+        </label>
+
+        <label class="radio radio-container">
+            <input class="radio__input" type="radio"  name="y" disabled>
+            <div class="radio__state">
+                <span class="radio__control"></span>
+                <span class="radio__label">Disabled</span>
+            </div>
+        </label>
+    </fieldset>
+
+</body>
+
 </html>
