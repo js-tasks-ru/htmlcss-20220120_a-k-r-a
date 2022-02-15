@@ -1,34 +1,40 @@
-.navtabs {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  border-bottom: 1px solid var(--grey-2);
-}
-
-.navtabs__item {
+/* layout and formatting */
+.navtabs__label {
   display: inline-block;
   color: var(--grey-3);
 }
 
-.navtabs__item:not(:last-child) {
+.navtabs__label:not(:last-child) {
   margin-right: 2.5rem;
 }
 
-.navtabs__item:hover,
 .navtabs__label {
   cursor: pointer;
 }
 
-.navtabs__item:hover,
-.navtabs__item_active {
+.navtabs__label:hover,
+.navtabs__control:checked + .navtabs__label {
   color: var(--black);
   transition: .2s color ease;
 }
 
-/* underline */
-.navtabs__item::after,
-.navtabs__item_active::after {
+.tabs__divider {
+  width: calc(100% + 6rem); 
+  /* 100% + 2 * paddingOfContainer */
+  /* It should be noted as variable, but where, in which file?  */
+  height: 1px;
+  background-color: var(--grey-2);
+  margin: 0 -3rem;
+}
+
+.navtabs__allitems {
+  padding-top: 72px;
+}
+/* END layout and formatting */
+
+/* hover and active state */
+.navtabs__control:checked + .navtabs__label::after,
+.navtabs__label::after {
   display: block;
   position: relative;
   left: 50%;
@@ -36,19 +42,50 @@
   content: "";
   height: 5px;
   margin-top: .5rem;
+}
+
+.navtabs__control:checked + .navtabs__label::after,
+.navtabs__label:hover::after  {
   background-color: var(--black);
 }
 
-.navtabs__item::after {
+.navtabs__label::after {
   width: 0;
 }
 
-.navtabs__item_active::after {
+.navtabs__control:checked + .navtabs__label::after {
   width: 100%;
 }
 
-.navtabs__item:hover::after {
+.navtabs__label:hover::after {
   width: 100%;
   transition: .2s width ease;
 }
-/* END underline */
+/* END hover and active state */
+
+.navtabs__control {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* activating content */
+.navtabs__content {
+  display: none;
+}
+
+#all_items:checked ~ [data-content="all_items"] [data-content="content1"],
+#all_items:checked ~ [data-content="all_items"] [data-content="content2"] {
+  display: block;
+}
+
+#item1:checked ~ [data-content="all_items"] [data-content="content1"] {
+  display: block;
+}
+
+#item2:checked ~ [data-content="all_items"] [data-content="content2"] {
+  display: block;
+}
+/* END activating content */

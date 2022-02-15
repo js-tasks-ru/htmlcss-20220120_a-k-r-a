@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="navtabs.css">
+  <title>Navtabs-test</title>
+  <style>
+    body {
+      padding: 100px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="navtabs">
+      <input type="radio" class="navtabs__control" name="navtabs-control" id="all_items">
+      <label for="all_items" class="navtabs__label">All items</label>
+    
+      <input type="radio" class="navtabs__control" name="navtabs-control" id="item1">
+      <label for="item1" class="navtabs__label">item 1</label>
+    
+      <input type="radio" class="navtabs__control" name="navtabs-control" id="item2">
+      <label for="item2" class="navtabs__label">item 2</label>
+    
+      <div class="tabs__divider"></div>
+    
+      <div data-content="all_items" class="navtabs__allitems">
+        <div class="navtabs__content navtabs__content_1" data-content="content1">
+          Content 1 Content 1 Content 1 Content 1 Content 1 Content 1 Content 1 Content 1 Content 1 Content 1 Content 1
+          Content 1 Content 1
+        </div>
+    
+        <div class="navtabs__content navtabs__content_2" data-content="content2">
+          Content 2 Content 2 Content 2 Content 2 Content 2 Content 2 Content 2 Content 2 Content 2 Content 2 Content 2
+          Content 2 Content 2 Content 2 Content 2 Content 2 Content 2
+        </div>
+      </div>
+    </div>  
+  </div>
+
+</body>
+
+</html>
