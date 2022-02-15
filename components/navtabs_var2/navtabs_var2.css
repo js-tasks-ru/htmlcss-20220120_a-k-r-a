@@ -1,0 +1,73 @@
+/* layout and formatting */
+.navtabs__link {
+  display: inline-block;
+  color: var(--grey-3);
+}
+
+.navtabs__link:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.navtabs__link {
+  cursor: pointer;
+}
+
+.navtabs__link:hover,
+.navtabs__link_active {
+  color: var(--black);
+  transition: .2s color ease;
+}
+
+.navtabs__allitems {
+  padding-top: 72px;
+  border-top: 1px solid var(--grey-3);
+}
+/* END layout and formatting */
+
+/* hover and active state */
+.navtabs__link_active::after,
+.navtabs__link::after {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  height: 5px;
+  margin-top: .5rem;
+}
+
+.navtabs__link_active::after,
+.navtabs__link:hover::after  {
+  background-color: var(--black);
+}
+
+.navtabs__link::after {
+  width: 0;
+}
+
+.navtabs__link_active::after {
+  width: 100%;
+}
+
+.navtabs__link:hover::after {
+  width: 100%;
+  transition: .2s width ease;
+}
+/* END hover and active state */
+
+/* activating content */
+.navtabs__content {
+  display: none;
+}
+
+.navtabs__content:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+#allitems:target #content1,
+#allitems:target #content2,
+#content1:target,
+#content2:target {
+  display: block;
+}
+/* END activating content */
