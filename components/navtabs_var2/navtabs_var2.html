@@ -25,9 +25,9 @@
 
     <div class="navtabs">
       <nav class="navtabs__nav">
-        <a href="#allitems" class="navtabs__link">All items</a>
-        <a href="#content1" class="navtabs__link">item 1</a>
-        <a href="#content2" class="navtabs__link">item 2</a>
+        <a href="#allitems" class="navtabs__link navtabs__link_active" onclick="activateNavItem(this)">All items</a>
+        <a href="#content1" class="navtabs__link" onclick="activateNavItem(this)">item 1</a>
+        <a href="#content2" class="navtabs__link" onclick="activateNavItem(this)">item 2</a>
       </nav>
 
       <div class="navtabs__allitems" id="allitems">
@@ -47,9 +47,12 @@
 
 </body>
 <script>
-  function activateNavItem() {
-    
-  }
+    function activateNavItem(e) {
+      document
+      .querySelectorAll('.navtabs__link_active')
+      .forEach( item => { item.classList.remove('navtabs__link_active'); }); 
+      e.classList.add('navtabs__link_active');
+    };  
 </script>
 
 </html>
