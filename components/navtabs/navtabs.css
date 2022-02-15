@@ -18,9 +18,17 @@
   transition: .2s color ease;
 }
 
+.tabs__divider {
+  width: calc(100% + 6rem); 
+  /* 100% + 2 * paddingOfContainer */
+  /* It should be noted as variable, but where, in which file?  */
+  height: 1px;
+  background-color: var(--grey-2);
+  margin: 0 -3rem;
+}
+
 .navtabs__allitems {
   padding-top: 72px;
-  border-top: 1px solid var(--grey-3);
 }
 /* END layout and formatting */
 
