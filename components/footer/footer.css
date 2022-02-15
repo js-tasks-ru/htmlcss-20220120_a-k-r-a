@@ -1,5 +1,5 @@
 .footer {
-  padding: 72px 0 96px;
+  padding: 20px 0 56px;
   text-align: center;
   background-color: var(--white);
 }
@@ -19,4 +19,24 @@
 
 .footer__text {
   margin-top: 0;
+}
+
+/* modefiers for different pages */
+.footer_transparent {
+  background-color: transparent;
+}
+
+.footer__text_template {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  color: var(--grey-3)
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+    padding-bottom: 36px;
+  }
 }

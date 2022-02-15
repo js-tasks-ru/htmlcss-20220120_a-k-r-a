@@ -1,0 +1,35 @@
+/* layout for a component-page */
+.template {
+  background-color: var(--grey-10);
+}
+
+.template__rows {
+  display: grid;
+  grid-template-rows: 80px 1fr auto;
+  row-gap: 36px;
+  height: 100%;
+}
+
+.template__middle {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-gap: 56px;
+}
+
+@media screen and (max-width: 1200px) {
+  .template {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .template__rows {
+    grid-template-rows: auto 1fr auto;
+    row-gap: 16px;
+  }
+
+  .template__middle {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <!-- Страница с полем ввода -->
-<html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./input.css">
-    </head>
-    <body>
+<html lang="en">
 
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./input.css">
+    <title>Fields input</title>
+    <style>
+        body {
+            padding-top: 100px;
+        }
+
+        .container {
+            margin: auto;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-container {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input input-container">
+            <label for="f1" class="input__label">Label</label>
+            <div class="input__wrapper">
+                <input type="text" placeholder="placeholder" id="f1" class="input__inputtext">
+                <div class="input__hint">Hint</div>
+            </div>
+        </div>
+
+        <div class="input input-container">
+            <label for="f2" class="input__label">Focus</label>
+            <div class="input__wrapper">
+                <input type="text" placeholder="Filled Input" id="f2" class="input__inputtext">
+                <div class="input__hint">Hint</div>
+            </div>
+        </div>
+
+        <div class="input input-success input-container">
+            <label for="f3" class="input__label">Success</label>
+            <div class="input__wrapper">
+                <input type="text" placeholder="Success" id="f3" class="input__inputtext">
+                <div class="input__hint">Hint</div>
+            </div>
+        </div>
+
+        <div class="input input-error input-container">
+            <label for="f4" class="input__label">Error</label>
+            <div class="input__wrapper">
+                <input type="text" placeholder="Error" id="f4" class="input__inputtext">
+                <div class="input__hint">Hint</div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

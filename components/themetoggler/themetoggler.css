@@ -1,0 +1,52 @@
+.themetoggler {
+  display: flex;
+  justify-items: top;
+  align-items: top;
+}
+
+.themetoggler__controls {
+  display: flex;
+}
+
+.themetoggler__label {
+  display: none
+}
+
+.themetoggler__toggler {
+  max-height: 28px;
+}
+
+.themetoggler__icon {
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.themetoggler__label,
+.themetoggler__toggler,
+.themetoggler__icon:not(:last-child) {
+  margin-right: 13px;
+}
+
+@media screen and (max-width: 768px) {
+  .themetoggler__icon {
+    display: none;
+  }
+
+  .themetoggler__label {
+    display: inline-block;
+  }
+
+  .themetoggler__toggler {
+    display: block; /* temporary */ 
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .themetoggler {
+    justify-content: space-between;
+  }
+
+  .themetoggler__toggler {
+    margin-right: 0;  
+  }
+}
