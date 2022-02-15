@@ -6,48 +6,128 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../components/container/container.css">
-  <link rel="stylesheet" href="../components/header/header.css">
-  <link rel="stylesheet" href="../components/footer/footer.css">
-  <link rel="stylesheet" href="../components/component-page/component-page.css">
+  <link rel="stylesheet" href="../components/template/template.css">
+  <link rel="stylesheet" href="../components/metanavi/metanavi.css">
+  <link rel="stylesheet" href="../components/themetoggler/themetoggler.css">
+  <link rel="stylesheet" href="../components/component/component.css">
+  <link rel="stylesheet" href="../components/navtabs/navtabs.css">
   <title>Template for a component page</title>
+  <style>
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
 </head>
 
-<body class="component-page">
+<body class="template">
+  <div class="container container_fullheight">
+    <div class="template__rows">
 
-  <header class="header component-page__header">
-    <div class="container">
-    </div>
-  </header>
+      <header class="header header_transparent">
+        <div class="header__controls">
+          <div class="header__burger">
+            <button class="header__burgercheckbox" onclick="toggleModalMenu()">burger</button>
+          </div>
+          <a href="#" class="header__logo">
+            <img class="header__logoimage" src="../assets/images/logo.svg"
+              alt="To the page with all component previews">
+          </a>
 
-  <main>
-    <div class="container component-page__container">
-      <div class="component-page__content">
-        <nav class="component-page__nav">
-          <div class="component-page__nav-title">Components</div>
-          <ul class="component-page__nav-links">
-            <li><a href="#" class="component-page__nav-link">Modal</a></li>
-            <li><a href="#" class="component-page__nav-link">Tooltip</a></li>
-            <li><a href="#" class="component-page__nav-link">Avatar</a></li>
-            <li><a href="#" class="component-page__nav-link">Calendar</a></li>
-            <li><a href="#" class="component-page__nav-link active">Histogram</a></li>
-            <li><a href="#" class="component-page__nav-link">Custom form elements</a></li>
-            <li><a href="#" class="component-page__nav-link">Main page</a></li>
+          <div class="header__groupwrapper" id="header__groupwrapper">
+            <div class="header__group" id="header__group">
+              <nav class="metanavi header__groupitem" id="metanavi">
+                <ul class="metanavi__list">
+                  <li class="metanavi__listitem"><a class="metanavi__link_active" href="#">Components</a></li>
+                  <li class="metanavi__listitem"><a class="metanavi__link" href="#">About</a></li>
+                  <li class="metanavi__listitem"><a class="metanavi__link" href="#">Contact</a></li>
+                </ul>
+              </nav>
+
+              <div class="themetoggler header__groupitem">
+                <label for="toggler" class="themetoggler__label">Dark mode</label>
+                <div class="themetoggler__controls" id="toggler">
+                  <img class="themetoggler__icon" src="../assets/images/icons/sun.svg" alt="">
+                  <!-- temporary as image: -->
+                  <img class="themetoggler__toggler" src="../assets/images/icons/toggler_dummy.svg"  alt="">                
+                  <img class="themetoggler__icon" src="../assets/images/icons/moon.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <main class="template__middle">
+        <nav class="nav nav-template" id="nav">
+          <div class="nav__title">Components</div>
+          <ul class="nav__links">
+            <li class="nav__links-item"><a href="#" class="nav__link">Modal main_template</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Tooltip</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Avatar</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Calendar</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link nav__link_active">Histogram</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Custom form elements</a></li>
+            <li class="nav__links-item"><a href="#" class="nav__link">Main page</a></li>
           </ul>
         </nav>
-        <div class="component-page__component-container">
-          <h1 class="component-page__title">Component title</h1>
-          Component-Card
-        </div>
-      </div>
-    </div>
-  </main>
 
-  <footer class="footer component-page__footer">
-    <div class="container">
-      Reusable component library
+        <div class="component" id="component">
+          <h1 class="component__title">Component title</h1>
+          <div>Component card</div>
+          <ul class="navtabs">
+            <li class="navtabs__item navtabs__item_active">
+              <label class="navtabs__label navtabs__label_active">item 1</label>
+            </li>
+            <li class="navtabs__item">
+              <span class="navtabs__label">item 2</span>
+            </li>
+            <li class="navtabs__item">
+              <span class="navtabs__label">item 3</span>
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <footer class="footer footer_transparent" id="footer">
+        <div class="footer__text_template">Reusable component library</div>
+      </footer>
+
     </div>
-  </footer>
+  </div>
+
+  <script>
+    function toggleModalMenu() {
+      document.getElementById('nav').classList.toggle('show');
+      document.getElementById('header__groupwrapper').classList.toggle('show');
+      document.getElementById('component').classList.toggle('hide');
+      document.getElementById('footer').classList.toggle('hide');
+    }
+
+    function resetModalMenu() {
+      const largeWindow = window.matchMedia('(min-width: 768px)');
+      largeWindow.addListener(resetModalMenu);
+      if (largeWindow.matches) {
+        document.getElementById('nav').classList.remove('show');
+        document.getElementById('nav').classList.remove('hide');
+
+        document.getElementById('header__groupwrapper').classList.remove('show');
+        document.getElementById('header__groupwrapper').classList.remove('hide');
+
+        document.getElementById('component').classList.remove('show');
+        document.getElementById('component').classList.remove('hide');
+
+        document.getElementById('footer').classList.add('show');
+        document.getElementById('footer').classList.add('hide');
+      }
+    }
+
+    resetModalMenu();
+  </script>
 
 </body>
 </html>

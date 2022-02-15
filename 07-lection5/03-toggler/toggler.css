@@ -1,0 +1,109 @@
+/* formatting and position */
+.toggler {
+  position: relative;
+}
+
+.toggler__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  outline: none;
+  background-image: none;
+}
+
+.toggler__state {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.toggler__control {
+  width: 52px;
+  height: 28px;
+  border-radius: 16px;
+}
+
+.toggler__control::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 16px;
+}
+
+.toggler__label {
+  color: var(--grey-4);
+}
+/* END formatting and position */
+
+/* states */
+/* default */
+.toggler__control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--grey-2);
+  background-color: var(--white);
+}
+
+.toggler__control::after {
+  margin-left: 1px;
+  background-color: var(--grey-2);
+}
+
+.toggler__label::after {
+  content: "Off";
+}
+
+/* checked */
+.toggler__input:checked ~ .toggler__state .toggler__control {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+}
+
+.toggler__input:checked ~ .toggler__state .toggler__control::after {
+  margin-left: auto;
+  margin-right: 1px;
+  background-color: var(--white);
+}
+
+.toggler__input:checked ~ .toggler__state .toggler__label {
+  text-decoration: underline;
+}
+
+.toggler__input:checked ~ .toggler__state .toggler__label::after {
+  content: "On";
+}
+
+/* disabled */
+.toggler__input:disabled ~ .toggler__state .toggler__control {
+  border: 1px solid var(--grey-3);
+  background-color: var(--grey-3);
+}
+
+.toggler__input:disabled ~ .toggler__state .toggler__label {
+  color: var(--grey-2);
+}
+
+.toggler__input:disabled ~ .toggler__state .toggler__label::after {
+  content: "Disabled";
+}
+
+.toggler__input:disabled ~ .toggler__state {
+  cursor: not-allowed;
+}
+
+/* hover */
+.toggler__state {
+  cursor: pointer;
+}
+
+.toggler__input:not(:disabled):hover ~ .toggler__state .toggler__label {
+  text-decoration: underline;
+}
+
+/* focus */
+.toggler__input:focus ~ .toggler__state {
+  outline-offset: 2px;
+  outline: 1px solid var(--red);
+}
+/* END states */

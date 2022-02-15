@@ -1,0 +1,29 @@
+.metanavi__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.metanavi__listitem:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.metanavi__link {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--grey-3);
+  text-decoration: none;
+}
+
+.metanavi__link_active, 
+.metanavi__link:hover {
+  text-decoration: underline;
+  color: var(--black);
+}
+
+@media screen and (max-width: 500px) {
+  .metanavi__list {
+    flex-wrap: wrap;
+  }
+}

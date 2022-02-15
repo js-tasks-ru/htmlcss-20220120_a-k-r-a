@@ -1,0 +1,46 @@
+.nav__title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+
+.nav__links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav__linksitem {
+  margin-bottom: 0.25rem;
+}
+
+.nav__links .nav__linksitem:last-child {
+  margin-top: 1.625rem;
+}
+
+.nav__link {
+  font-size: .875rem;
+  line-height: 1.375rem;
+
+  text-decoration: none;
+  color: var(--black);
+}
+
+.nav__link_active {
+  color: var(--red);
+}
+
+.nav__link:not(.nav__link_active):hover {
+  text-decoration: underline;
+}
+
+.nav-template {
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
